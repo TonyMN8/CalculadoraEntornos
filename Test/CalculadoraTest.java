@@ -15,21 +15,39 @@ class CalculadoraTest {
     }
 
     @Test
+    public void testResta() {
+        Calculadora calculadora = new Calculadora();
+        assertEquals(20.0, calculadora.resta(30.0, 10.0));
+    }
+
+    @Test
+    public void testRestaNegativo() {
+        Calculadora calculadora = new Calculadora();
+        assertEquals(-5, calculadora.resta(10.0, -15.0));
+    }
+
+    @Test
+    public void testRestaConTres() {
+        Calculadora calculadora = new Calculadora();
+        assertEquals(0.0, calculadora.resta(3.3, 3.3));
+    }
+
+    @Test
     public void testMultiplicacion() {
         Calculadora calculadora = new Calculadora();
-        assertEquals(50.0, calculadora.sumar(5.0, 10.0));
+        assertEquals(50.0, calculadora.multiplicar(5.0, 10.0));
     }
 
     @Test
     public void testMultiplicarConNegativos() {
         Calculadora calculadora = new Calculadora();
-        assertEquals(20.0, calculadora.sumar(-20.0, -1.0));
+        assertEquals(20.0, calculadora.multiplicar(-20.0, -1.0));
     }
 
     @Test
     public void testMultiplicarConTres() {
         Calculadora calculadora = new Calculadora();
-        assertEquals(10.89, calculadora.sumar(3.3, 3.3));
+        assertEquals(10.89, calculadora.multiplicar(3.3, 3.3));
     }
 
 }
