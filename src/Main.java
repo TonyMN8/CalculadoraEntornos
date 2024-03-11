@@ -4,6 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        Calculadora calcular = new Calculadora();
+        double num1 = 0;
+        double num2 = 0;
 
         int opcion;
         do{
@@ -18,16 +21,32 @@ public class Main {
 
             switch (opcion){
                 case 1:
-                    System.out.println("Seleccionas la opcion 2");
+                    System.out.print("Introduce el primer numero");
+                    num1 = sc.nextDouble();
+                    System.out.print("Introduce el segundo numero");
+                    num2 = sc.nextDouble();
+                    System.out.print(calcular.sumar(num1, num2));
                     break;
                 case 2:
-                    System.out.println("Seleccionas la opcion 2");
+                    System.out.print("Introduce el primer numero");
+                    num1 = sc.nextDouble();
+                    System.out.print("Introduce el segundo numero");
+                    num2 = sc.nextDouble();
+                    System.out.print(calcular.resta(num1, num2));
                     break;
                 case 3:
-                    System.out.println("Seleccionas la opcion 3");
+                    System.out.print("Introduce el primer numero");
+                    num1 = sc.nextDouble();
+                    System.out.print("Introduce el segundo numero");
+                    num2 = sc.nextDouble();
+                    System.out.print(calcular.multiplicar(num1, num2));
                     break;
                 case 4:
-                    System.out.println("Seleccionas la opción 4");
+                    System.out.print("Introduce el primer numero");
+                    num1 = sc.nextDouble();
+                    System.out.print("Introduce el segundo numero");
+                    num2 = sc.nextDouble();
+                    System.out.print(calcular.dividir(num1, num2));
                     break;
                 case 0:
                     System.out.println("Cierras el programa");
